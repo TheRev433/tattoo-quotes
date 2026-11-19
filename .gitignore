@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# build output and caches
+dist/
+out-tsc/
+.angular/
+.cache/
+coverage/
+
+# local runtime data (SQLite database, uploaded images)
+data/
+uploads/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# tooling
+playwright-report/
+test-results/
+.venv/
+*.log
+.DS_Store
+.env

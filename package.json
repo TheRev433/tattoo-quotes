@@ -1,0 +1,30 @@
+{
+  "name": "tattoo-quotes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tattoo studio quote manager: clients request quotes with reference images, artists review, reply and price them.",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build -w @tattoo-quotes/api && npm run build -w @tattoo-quotes/web",
+    "start": "npm run start -w @tattoo-quotes/api",
+    "test": "npm run test -w @tattoo-quotes/api && npm run test -w @tattoo-quotes/web",
+    "lint": "eslint .",
+    "typecheck": "npm run typecheck -w @tattoo-quotes/api && npm run typecheck -w @tattoo-quotes/web",
+    "seed": "npm run seed -w @tattoo-quotes/api"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.10.0",
+    "globals": "17.12.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.0",
+    "vitest": "4.1.11"
+  }
+}
